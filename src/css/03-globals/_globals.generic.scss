@@ -1,0 +1,17 @@
+/*  ========================================================================
+    # Globals - Generic
+    ========================================================================  */
+
+body {
+  font-family: $font-family;
+  font-size: $font-size__text;
+  font-weight: 400;
+  color: $color__black;
+  background-color: $color__white;
+}
+
+::selection {
+  background-color: $color__black;
+  color: $color__white;
+  text-shadow: none;
+}

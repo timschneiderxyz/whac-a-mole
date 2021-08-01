@@ -1,0 +1,74 @@
+/*  ========================================================================
+    # Main SCSS
+    ========================================================================  */
+
+// Charset
+@charset 'UTF-8';
+
+// Settings - Variables for fonts, colors, breakpoints, etc.
+// =============================================================================
+
+@import '01-settings/settings.fonts';
+@import '01-settings/settings.colors';
+
+// Tools - Functions, Mixins and Keyframes.
+// =============================================================================
+
+// @import '02-tools/tools.';
+
+// Globals - Styles for resetting, elements and the grid.
+// =============================================================================
+
+@import '03-globals/globals.resets';
+@import '03-globals/globals.generic';
+@import '03-globals/globals.typography';
+
+// =============================================================================
+
+.container {
+  max-width: 640px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.header {
+  margin: 0 0 60px;
+
+  h1 {
+    text-align: center;
+    margin: 0 0 42px;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__timer {
+    //
+  }
+
+  &__score {
+    //
+  }
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+
+  &__cell {
+    aspect-ratio: 1;
+    border: 1px solid #000000;
+    cursor: pointer;
+
+    &.mole {
+      background-image: url('../images/mole.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80%;
+    }
+  }
+}
